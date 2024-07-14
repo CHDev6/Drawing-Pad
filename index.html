@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Drawing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="controls">
+        <div class="opacity_area"></div>
+        <div class="pen_size_area"></div>
+
+        <div class="canvas_color">
+            <label class="color12" for="canvasColorPicker"><b>Canvas Color:</b></label>
+            <input type="color" id="canvasColorPicker" value="#FFFFFF">
+        </div>
+
+        <label class="pen_color_label" for="pen_color_label"><b>Pen Color</b></label>
+        <input type="color" id="colorPicker" value="#000000">
+
+        <label class="pen_size_label"><b>Pen Size</b></label>
+        <input type="range" id="lineWidth" min="1" max="20" value="1" class="vertical-slider2">
+
+        <label class="opacity_label"><b>Opacity</b></label>
+        <input type="range" id="opacity" min="0" max="1" step="0.01" value="1" class="vertical-slider1">
+
+        <button id="pen_mode_btn"><b>Pen</b></button>
+        <button id="brush_btn"><b>Brush</b></button>
+        <button id="eraser_mode_btn"><b>Eraser</b></button>
+        <button id="reset_btn"><b>Reset Canvas</b></button>
+        
+        <button id="download_btn"><b>Download</b></button>
+
+        <label for="notes" class="notes_label"><b>Notes</b></label>
+        <textarea name="notes" class="notes" placeholder="Train of thought or custom RGB colors here..."></textarea>
+
+    </div>
+    <canvas id="myCanvas" width="1050" height="600"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
