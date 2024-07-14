@@ -1,0 +1,237 @@
+/* Remove text selecting for elements */
+* {
+    user-select: none;
+}
+
+/* Body style */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(rgb(85, 85, 85), rgb(134, 134, 134), rgb(85, 85, 85));
+}
+
+/* Styling for control elements */
+.controls {
+    margin-bottom: 10px;
+}
+
+/* Vertical sliders styling */
+.controls .vertical-slider2 {
+    appearance: slider-vertical; /* Vertical slider appearance */
+    width: 150px;
+    height: 280px;
+    margin-left: 10px;
+    position: absolute;
+    left: 40px;
+    top: 110px;
+}
+
+.controls .vertical-slider1 {
+    appearance: slider-vertical; /* Vertical slider appearance */
+    width: 150px;
+    height: 280px;
+    margin-left: 10px;
+    position: absolute;
+    left: 1330px;
+    top: 110px;
+}
+
+/* Canvas styling */
+canvas {
+    border: 4px solid #000000; 
+    cursor: crosshair; /* Crosshair cursor */
+    background-color: rgb(255, 255, 255); 
+}
+
+/* Left side of UI*/
+.pen_size_label {
+    font-size: 35px; 
+    position: absolute;
+    left: 67px;
+    top: 42px;
+    width: 126px;
+    border-bottom: solid black 3px;
+}
+
+.pen_color_label {
+    font-size: 35px; 
+    position: absolute;
+    left: 47px;
+    top: 440px;
+    width: 156px;
+    border-bottom: solid black 3px;
+}
+
+#colorPicker {
+    font-size: 30px;
+    position: absolute;
+    left: 59px;
+    top: 494px;
+    width: 126px;
+    height: 35px;
+    border: solid black 3px;
+}
+
+#download_btn {
+    background: linear-gradient(rgb(53, 69, 255), rgb(0, 12, 148)); 
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    font-size: 25px;
+    border: solid black 4px;
+    position: absolute;
+    font-weight: bold;
+    left: 45px;
+    top: 565px;
+}
+
+#download_btn:hover {
+    background: linear-gradient(rgb(11, 25, 175), rgb(0, 9, 114)); 
+}
+
+/* RIGHT SIDE */
+.opacity_label {
+    font-size: 35px; 
+    position: absolute;
+    left: 1347px;
+    top: 42px;
+    width: 121px;
+    height: 41px;
+    border-bottom: solid black 3px;
+}
+
+.notes_label {
+    font-size: 39px;
+    position: absolute;
+    left: 1365px;
+    top: 432px;
+    width: 95px;
+    height: 41px;
+    border-bottom: solid black 3px;
+}
+
+.notes {
+    position: absolute;
+    resize: none;
+    left: 1317px;
+    top: 493px;
+    width: 190px;
+    height: 210px;
+    font-weight: bold;
+    font-size: 16px;
+    border: solid black 3px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.opacity_area {
+    border: solid black 5px;
+    position: absolute;
+    left: 1331px;
+    top: 30px;
+    width: 150px;
+    height: 380px;
+    border-radius: 40px;
+}
+
+.pen_size_area {
+    border: solid black 5px;
+    position: absolute;
+    left: 49px;
+    top: 30px;
+    width: 150px;
+    height: 380px;
+    border-radius: 40px;
+}
+
+/* TOP (Main UI)*/
+#pen_mode_btn {
+    background: linear-gradient(rgb(243, 194, 0), rgb(164, 131, 0)); 
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border: solid black 4px;
+    border-radius: 35px;
+    position: absolute;
+    left: 240px;
+    top: 30px;
+}
+
+#eraser_mode_btn {
+    background: linear-gradient(rgb(212, 0, 194), rgb(154, 0, 141)); 
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border: solid black 4px;
+    border-radius: 35px;
+    position: absolute;
+    left: 461px;
+    top: 30px;
+}
+
+#reset_btn {
+    background: linear-gradient(red, rgb(184, 0, 0)); 
+    height: 50px;
+    font-size: 20px;
+    border: solid black 4px;
+    border-radius: 35px;
+    position: absolute;
+    left: 1110px;
+    top: 30px;
+}
+
+#brush_btn {
+    background: linear-gradient(rgb(0, 211, 14), rgb(0, 149, 10)); 
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    border: solid black 4px;
+    border-radius: 35px;
+    position: absolute;
+    left: 350px;
+    top: 30px;
+}
+
+.canvas_color {
+    border: solid black 4px;
+    border-radius: 35px;
+    background: linear-gradient(rgb(42, 113, 255), rgb(9, 62, 170)); 
+    width: 210px;
+    height: 20px;
+    margin-left: 428px;
+    margin-bottom: 5px;
+    padding-bottom: 16px;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+
+#canvasColorPicker {
+    border: solid black 3px;
+}
+
+.color12 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+textarea:focus {
+    outline: none; /* Remove the default focus outline for textareas*/
+}
+
+#pen_mode_btn,
+#brush_btn,
+#eraser_mode_btn,
+#reset_btn {
+    transition: transform 0.3s ease; /* Smooth transition in 0.3 seconds */
+}
+
+#pen_mode_btn:hover,
+#brush_btn:hover,
+#eraser_mode_btn:hover,
+#reset_btn:hover {
+    transform: translateY(-6px); /* Move up by 6 pixels on hover */
+}
